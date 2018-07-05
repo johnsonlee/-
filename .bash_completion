@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ -d "~/.bash_completion.d" ]]; then
+    for i in $(LC_ALL=C command ls "~/.bash_completion.d"); do
+        i="~/.bash_completion.d/$i"
+        [[ ${i##*/} != @(*~|*.bak|*.swp|\#*\#|*.dpkg*|*.rpm@(orig|new|save)|Makefile*) && -f $i && -r $i ]] && . "$i"
+    done
+fi

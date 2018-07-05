@@ -1,0 +1,21 @@
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[color]
+	ui = true
+	diff = auto
+	status = auto
+	branch = auto
+[remote "origin"]
+	push = refs/heads/*:refs/for/*
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	pr = pull --rebase
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	visual = !gitk
+[http]
+	postBuffer = 1048576000
