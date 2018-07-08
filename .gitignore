@@ -10,6 +10,7 @@
 .bash_sessions/
 .cache/
 .cisco/
+.cocoapods/
 .config/
 .cups/
 .curl/
@@ -18,7 +19,9 @@
 .emulator_console_auth_token
 .gconf/
 .gconfd/
+.gem/
 .gitbook/
+.gitcookies
 .gnupg/
 .gradle/
 .hwid
@@ -52,7 +55,7 @@ Documents/
 Downloads/
 GitBook/
 Google\ Drive/
-Google\ Drive\ File\ Stream/
+Google\ Drive\ File\ Stream
 Library/
 Movies/
 Music/
