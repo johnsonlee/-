@@ -17,6 +17,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias grep='grep --color=auto'
+alias proxy='export socks5_proxy=socks5://127.0.0.1:1086;export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;'
+alias unproxy='unset socks5_proxy http_proxy https_proxy'
 
 if [ -x "$(command -v brew)" ]; then
 
