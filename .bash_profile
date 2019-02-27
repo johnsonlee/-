@@ -68,5 +68,5 @@ if [ ! -z "$(command -v __git_ps1)" ]; then
     export PROMPT_COMMAND='__git_ps1 "\\[$(tput bold)\\]\u@\h\\[$(tput sgr0)\\]:\\[$(tput setaf 4)\\]\w\\[$(tput sgr0)\\]" " \\\$ "'
 fi
 
-export PATH="~/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="~/bin:/usr/local/opt/python/libexec/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
