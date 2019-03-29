@@ -4,15 +4,19 @@ This repo is used to configure the `~` directory quickly on a new Mac by [bootst
 
 ## Quick Start
 
-```shell
+```bash
 cd ~
 
 git init
-
 git remote add origin https://github.com/macosx/home.git
 
-git fetch --all
-
-git checkout master
+git fetch --all && git checkout master
 ```
 
+## Configure VIM
+
+```bash
+git submodule init && git submodule update
+
+~/.vim/bundle/vim-powerline-fonts/install.sh
+```
