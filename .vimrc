@@ -14,6 +14,7 @@ set tabstop=4
 set term=screen-256color
 set undofile
 set undodir=~/.vim/undodir
+set nocompatible
 
 syntax enable
 syntax on
@@ -35,9 +36,16 @@ let g:NERDTreeWinSize = 50
 
 execute pathogen#infect()
 
-autocmd vimenter * if !argc() | NERDTree | endif
+" vundle
+filetype off
+set rtp+=~/.vim/bundle/vim-vundle
+call vundle#begin()
+call vundle#end()
+filetype plugin indent on
 
+" key mapping
 nmap <F8> :TagbarToggle<CR>
 nnoremap <silent> <Tab> :bn<CR>
 nnoremap <silent> <S-Tab> :bp<CR>
 
+autocmd vimenter * if !argc() | NERDTree | endif
