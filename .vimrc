@@ -35,6 +35,9 @@ let g:NERDTreeWinSize = 50
 
 execute pathogen#infect()
 
+autocmd vimenter * if !argc() | NERDTree | endif
+
+nmap <F8> :TagbarToggle<CR>
 nnoremap <silent> <Tab> :bn<CR>
 nnoremap <silent> <S-Tab> :bp<CR>
 
