@@ -40,6 +40,7 @@ execute pathogen#infect()
 filetype off
 set rtp+=~/.vim/bundle/vim-vundle
 call vundle#begin()
+Plugin 'posva/vim-vue'
 call vundle#end()
 filetype plugin indent on
 
