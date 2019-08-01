@@ -15,6 +15,8 @@ set term=screen-256color
 set undofile
 set undodir=~/.vim/undodir
 set nocompatible
+set nofoldenable
+
 
 syntax enable
 syntax on
