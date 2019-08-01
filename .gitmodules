@@ -52,3 +52,6 @@
 [submodule ".vim/bundle/vim-vundle"]
 	path = .vim/bundle/vim-vundle
 	url = https://github.com/VundleVim/Vundle.vim.git
+[submodule ".vim/pack/typescript/start/vim-typescript"]
+	path = .vim/pack/typescript/start/vim-typescript
+	url = https://github.com/leafgarland/typescript-vim.git
