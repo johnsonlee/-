@@ -19,3 +19,4 @@
 	visual = !gitk
 [http]
 	postBuffer = 1048576000
+	cookiefile = ~/.gitcookies
