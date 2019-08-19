@@ -35,6 +35,7 @@ let g:indentLine_char = '│'
 
 " nerdtree window size
 let g:NERDTreeWinSize = 50
+let NERDTreeShowHidden = 1
 
 execute pathogen#infect()
 
