@@ -17,8 +17,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias grep='grep --color=auto'
-alias proxy='export socks5_proxy=socks5://127.0.0.1:1086;export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;'
-alias unproxy='unset socks5_proxy http_proxy https_proxy'
 
 if [ -x "$(command -v brew)" ]; then
 
@@ -74,5 +72,8 @@ if [ ! -z "$(command -v __git_ps1)" ]; then
     export PROMPT_COMMAND='__git_ps1 "\\[$(tput bold)\\]\u@\h\\[$(tput sgr0)\\]:\\[$(tput setaf 4)\\]\w\\[$(tput sgr0)\\]" " \\\$ "'
 fi
 
-export PATH="~/bin:/usr/local/opt/python/libexec/bin:/usr/local/bin:/usr/local/sbin:$PATH"
-
+export PATH="~/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="/usr/local/opt/gawk/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
