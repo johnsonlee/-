@@ -24,12 +24,6 @@ if [ -x "$(command -v brew)" ]; then
 
     [ "$(brew ls --versions bash-completion)" ] && [ -e "$(brew --prefix)/etc/bash_completion" ] && . $(brew --prefix)/etc/bash_completion
 
-    ## nvm
-
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
-    [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"
-
     ## android sdk & ndk
 
     [ -d "$(brew --prefix)/share/android-sdk"    ] && export ANDROID_SDK_ROOT="$(brew --prefix)/share/android-sdk"
@@ -66,14 +60,24 @@ if [ -x "$(command -v brew)" ]; then
 
 fi
 
+## nvm
+
+[ -d "$HOME/.nvm" ] && export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"
+
 ## git command line promption
 
-if [ ! -z "$(command -v __git_ps1)" ]; then
-    export PROMPT_COMMAND='__git_ps1 "\\[$(tput bold)\\]\u@\h\\[$(tput sgr0)\\]:\\[$(tput setaf 4)\\]\w\\[$(tput sgr0)\\]" " \\\$ "'
-fi
+[ ! -z "$(command -v __git_ps1)" ] && export PROMPT_COMMAND='__git_ps1 "\\[$(tput bold)\\]\u@\h\\[$(tput sgr0)\\]:\\[$(tput setaf 4)\\]\w\\[$(tput sgr0)\\]" " \\\$ "'
 
-export PATH="~/bin:/usr/local/bin:/usr/local/sbin:$PATH"
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-export PATH="/usr/local/opt/gawk/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+## gnu command line
+
+[ -d "/usr/local/opt/python/libexec/bin"     ] && export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+[ -d "/usr/local/opt/gawk/libexec/gnubin"    ] && export PATH="/usr/local/opt/gawk/libexec/gnubin:$PATH"
+[ -d "/usr/local/opt/gnu-sed/libexec/gnubin" ] && export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+[ -d "/usr/local/opt/grep/libexec/gnubin"    ] && export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+
+## user bins
+
+[ -d "$HOME/bin" ] && export PATH="~/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+
