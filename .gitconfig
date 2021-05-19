@@ -10,6 +10,7 @@
 	push = refs/heads/*:refs/for/*
 [alias]
 	co = checkout
+	cp = cherry-pick
 	br = branch
 	ci = commit
 	st = status
