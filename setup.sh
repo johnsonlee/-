@@ -13,7 +13,7 @@ fi
     && git init \
     && git remote add origin https://github.com/johnsonlee/- \
     && git fetch --all \
-    && git checkout master \
+    && git checkout main \
     && git submodule init \
     && git submodule update \
     && $HOME/.vim/bundle/vim-powerline-fonts/install.sh
