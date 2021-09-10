@@ -1,57 +1,57 @@
 [submodule ".vim/bundle/vim-syntastic"]
 	path = .vim/bundle/vim-syntastic
-	url = https://github.com/scrooloose/syntastic
+	url = git@github.com:scrooloose/syntastic
 [submodule ".vim/bundle/vim-gitgutter"]
 	path = .vim/bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter
+	url = git@github.com:airblade/vim-gitgutter
 [submodule ".vim/bundle/vim-go"]
 	path = .vim/bundle/vim-go
-	url = https://github.com/fatih/vim-go.git
+	url = git@github.com:fatih/vim-go.git
 [submodule ".vim/bundle/vim-markdown"]
 	path = .vim/bundle/vim-markdown
-	url = https://github.com/plasticboy/vim-markdown
+	url = git@github.com:plasticboy/vim-markdown
 [submodule ".vim/bundle/vim-tagbar"]
 	path = .vim/bundle/vim-tagbar
-	url = https://github.com/majutsushi/tagbar
+	url = git@github.com:majutsushi/tagbar
 [submodule ".vim/bundle/vim-javascript"]
 	path = .vim/bundle/vim-javascript
-	url = https://github.com/pangloss/vim-javascript.git
+	url = git@github.com:pangloss/vim-javascript.git
 [submodule ".vim/bundle/vim-airline"]
 	path = .vim/bundle/vim-airline
-	url = https://github.com/bling/vim-airline
+	url = git@github.com:bling/vim-airline
 [submodule ".vim/bundle/vim-coffee-script"]
 	path = .vim/bundle/vim-coffee-script
-	url = https://github.com/kchmck/vim-coffee-script
+	url = git@github.com:kchmck/vim-coffee-script
 [submodule ".vim/bundle/vim-fugitive"]
 	path = .vim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive
 [submodule ".vim/bundle/vim-nerdtree"]
 	path = .vim/bundle/vim-nerdtree
-	url = https://github.com/scrooloose/nerdtree
+	url = git@github.com:scrooloose/nerdtree
 [submodule ".vim/bundle/vim-nerdtree-tabs"]
 	path = .vim/bundle/vim-nerdtree-tabs
-	url = https://github.com/jistr/vim-nerdtree-tabs.git
+	url = git@github.com:jistr/vim-nerdtree-tabs.git
 [submodule ".vim/bundle/vim-nerdtree-git"]
 	path = .vim/bundle/vim-nerdtree-git
-	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+	url = git@github.com:Xuyuanp/nerdtree-git-plugin.git
 [submodule ".vim/bundle/vim-powerline-fonts"]
 	path = .vim/bundle/vim-powerline-fonts
-	url = https://github.com/powerline/fonts.git
+	url = git@github.com:powerline/fonts.git
 [submodule ".vim/bundle/vim-indent-line"]
 	path = .vim/bundle/vim-indent-line
-	url = https://github.com/Yggdroot/indentLine.git
+	url = git@github.com:Yggdroot/indentLine.git
 [submodule ".vim/bundle/vim-supertab"]
 	path = .vim/bundle/vim-supertab
-	url = https://github.com/ervandew/supertab.git
+	url = git@github.com:ervandew/supertab.git
 [submodule ".vim/bundle/vim-ctrlp"]
 	path = .vim/bundle/vim-ctrlp
-	url = https://github.com/ctrlpvim/ctrlp.vim.git
+	url = git@github.com:ctrlpvim/ctrlp.vim.git
 [submodule ".vim/bundle/vim-es6"]
 	path = .vim/bundle/vim-es6
-	url = https://github.com/isRuslan/vim-es6.git
+	url = git@github.com:isRuslan/vim-es6.git
 [submodule ".vim/bundle/vim-vundle"]
 	path = .vim/bundle/vim-vundle
-	url = https://github.com/VundleVim/Vundle.vim.git
+	url = git@github.com:VundleVim/Vundle.vim.git
 [submodule ".vim/pack/typescript/start/vim-typescript"]
 	path = .vim/pack/typescript/start/vim-typescript
-	url = https://github.com/leafgarland/typescript-vim.git
+	url = git@github.com:leafgarland/typescript-vim.git
