@@ -11,7 +11,7 @@ fi
 
 [ ! -d "$HOME/.git" ] && cd $HOME \
     && git init \
-    && git remote add origin https://github.com/johnsonlee/- \
+    && git remote add origin git@github.com:johnsonlee/-.git \
     && git fetch --all \
     && git checkout main \
     && git submodule init \
