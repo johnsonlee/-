@@ -135,4 +135,4 @@ for pkg in $CASK_PACKAGES; do
     fi
 done
 
-brew cleanup --force && rm -rf /Library/Caches/Homebrew/*
+brew cleanup --prune=all && rm -rf /Library/Caches/Homebrew/*
