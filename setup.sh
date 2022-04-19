@@ -31,7 +31,7 @@ GNU_PACKAGES="gawk grep gnu-sed"
 
 for pkg in $GNU_PACKAGES; do
     if [ ! "$(brew ls --versions $pkg)" ]; then
-        brew install -v $pkg && echo "export PATH=\"/usr/local/opt/$pkg/libexec/gnubin:\$PATH\"" >> ~/.bash_profile
+        brew install -v $pkg
     fi
 done
 
@@ -95,11 +95,7 @@ done
 ## Install nvm
 
 if [ ! "$(brew ls --cask --versions nvm)" ]; then
-    brew install --cask -v nvm \
-            && mkdir ~/.nvm \
-            && echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.bash_profile \
-            && echo '[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"' >> ~/.bash_profile \
-            && echo '[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"' >> ~/.bash_profile            
+    brew install --cask -v nvm && mkdir ~/.nvm           
 fi
 
 
