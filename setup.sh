@@ -58,6 +58,18 @@ TERM_PACKAGES="$TERM_PACKAGES tmux"
 TERM_PACKAGES="$TERM_PACKAGES tree"
 TERM_PACKAGES="$TERM_PACKAGES webp"
 TERM_PACKAGES="$TERM_PACKAGES wget"
+TERM_PACKAGES="$TERM_PACKAGES openjdk@11"
+TERM_PACKAGES="$TERM_PACKAGES antlr"
+TERM_PACKAGES="$TERM_PACKAGES antlr"
+TERM_PACKAGES="$TERM_PACKAGES aspectj"
+TERM_PACKAGES="$TERM_PACKAGES cfr-decompiler"
+TERM_PACKAGES="$TERM_PACKAGES gradle"
+TERM_PACKAGES="$TERM_PACKAGES groovy"
+TERM_PACKAGES="$TERM_PACKAGES maven"
+TERM_PACKAGES="$TERM_PACKAGES apktool"
+TERM_PACKAGES="$TERM_PACKAGES dex2jar"
+TERM_PACKAGES="$TERM_PACKAGES jadx"
+TERM_PACKAGES="$TERM_PACKAGES smali"
 
 for pkg in $TERM_PACKAGES; do
     if [ ! "$(brew ls --versions $pkg)" ]; then
@@ -75,32 +87,6 @@ if [ ! "$(brew ls --cask --versions nvm)" ]; then
             && echo '[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"' >> ~/.bash_profile \
             && echo '[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"' >> ~/.bash_profile            
 fi
-
-
-## Install java packages
-
-brew tap AdoptOpenJDK/openjdk
-
-if [ ! "$(brew ls --cask --versions adoptopenjdk8)" ]; then
-    brew install --cask -v adoptopenjdk8
-fi
-
-JAVA_PACKAGES="$JAVA_PACKAGES antlr"
-JAVA_PACKAGES="$JAVA_PACKAGES aspectj"
-JAVA_PACKAGES="$JAVA_PACKAGES cfr-decompiler"
-JAVA_PACKAGES="$JAVA_PACKAGES gradle"
-JAVA_PACKAGES="$JAVA_PACKAGES groovy"
-JAVA_PACKAGES="$JAVA_PACKAGES maven"
-JAVA_PACKAGES="$JAVA_PACKAGES apktool"
-JAVA_PACKAGES="$JAVA_PACKAGES dex2jar"
-JAVA_PACKAGES="$JAVA_PACKAGES jadx"
-JAVA_PACKAGES="$JAVA_PACKAGES smali"
-
-for pkg in $JAVA_PACKAGES; do
-    if [ ! "$(brew ls --versions $pkg)" ]; then
-        brew install -v $pkg
-    fi
-done
 
 
 ## Install cask packages
