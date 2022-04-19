@@ -58,20 +58,34 @@ TERM_PACKAGES="$TERM_PACKAGES tmux"
 TERM_PACKAGES="$TERM_PACKAGES tree"
 TERM_PACKAGES="$TERM_PACKAGES webp"
 TERM_PACKAGES="$TERM_PACKAGES wget"
-TERM_PACKAGES="$TERM_PACKAGES openjdk@11"
-TERM_PACKAGES="$TERM_PACKAGES antlr"
-TERM_PACKAGES="$TERM_PACKAGES antlr"
-TERM_PACKAGES="$TERM_PACKAGES aspectj"
-TERM_PACKAGES="$TERM_PACKAGES cfr-decompiler"
-TERM_PACKAGES="$TERM_PACKAGES gradle"
-TERM_PACKAGES="$TERM_PACKAGES groovy"
-TERM_PACKAGES="$TERM_PACKAGES maven"
-TERM_PACKAGES="$TERM_PACKAGES apktool"
-TERM_PACKAGES="$TERM_PACKAGES dex2jar"
-TERM_PACKAGES="$TERM_PACKAGES jadx"
-TERM_PACKAGES="$TERM_PACKAGES smali"
 
 for pkg in $TERM_PACKAGES; do
+    if [ ! "$(brew ls --versions $pkg)" ]; then
+        brew install -v $pkg
+    fi
+done
+
+
+## Install java packages
+
+if [ ! "$(brew ls --versions openjdk@11)" ]; then
+    brew install -v openjdk@11
+    sudo ln -sfn /usr/local/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
+fi
+
+JAVA_PACKAGES="$JAVA_PACKAGES antlr"
+JAVA_PACKAGES="$JAVA_PACKAGES antlr"
+JAVA_PACKAGES="$JAVA_PACKAGES aspectj"
+JAVA_PACKAGES="$JAVA_PACKAGES cfr-decompiler"
+JAVA_PACKAGES="$JAVA_PACKAGES gradle"
+JAVA_PACKAGES="$JAVA_PACKAGES groovy"
+JAVA_PACKAGES="$JAVA_PACKAGES maven"
+JAVA_PACKAGES="$JAVA_PACKAGES apktool"
+JAVA_PACKAGES="$JAVA_PACKAGES dex2jar"
+JAVA_PACKAGES="$JAVA_PACKAGES jadx"
+JAVA_PACKAGES="$JAVA_PACKAGES smali"
+
+for pkg in $JAVA_PACKAGES; do
     if [ ! "$(brew ls --versions $pkg)" ]; then
         brew install -v $pkg
     fi
