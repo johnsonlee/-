@@ -5,6 +5,6 @@ This repo is used to configure the `~` directory quickly with a simple command l
 ## Quick Start
 
 ```bash
-curl -sL 'https://sh.johnsonlee.io/setup.sh' | sh
+curl -sL 'https://sh.johnsonlee.io/setup.sh' | /bin/bash
 ```
 
