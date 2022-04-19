@@ -46,7 +46,6 @@ TERM_PACKAGES="$TERM_PACKAGES coreutils"
 TERM_PACKAGES="$TERM_PACKAGES ffmpeg"
 TERM_PACKAGES="$TERM_PACKAGES git"
 TERM_PACKAGES="$TERM_PACKAGES gpg"
-TERM_PACKAGES="$TERM_PACKAGES gpg-agent"
 TERM_PACKAGES="$TERM_PACKAGES html-xml-utils"
 TERM_PACKAGES="$TERM_PACKAGES htop"
 TERM_PACKAGES="$TERM_PACKAGES iftop"
@@ -94,8 +93,8 @@ done
 
 ## Install nvm
 
-if [ ! "$(brew ls --cask --versions nvm)" ]; then
-    brew install --cask -v nvm && mkdir ~/.nvm           
+if [ ! "$(brew ls --versions nvm)" ]; then
+    brew install -v nvm && mkdir ~/.nvm           
 fi
 
 
