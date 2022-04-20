@@ -33,6 +33,7 @@
 .node-gyp/
 .npm/
 .npmrc
+.nvm/
 .pm2/
 .oracle_jre_usage/
 .repo_.gitconfig.json
@@ -49,6 +50,7 @@
 .wget-hsts
 .yarnrc
 .ShadowsocksX-NG/
+.TrojanX/
 Applications/
 Desktop/
 Documents/
