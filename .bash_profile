@@ -76,6 +76,7 @@ fi
 [ -d "/usr/local/opt/gawk/libexec/gnubin"    ] && export PATH="/usr/local/opt/gawk/libexec/gnubin:$PATH"
 [ -d "/usr/local/opt/gnu-sed/libexec/gnubin" ] && export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 [ -d "/usr/local/opt/grep/libexec/gnubin"    ] && export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+[ -d "/usr/local/opt/binutils/bin"           ] && export PATH="/usr/local/opt/binutils/bin:$PATH"
 
 ## user bins
 
