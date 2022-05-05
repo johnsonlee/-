@@ -39,6 +39,7 @@ done
 ## Install core packages
 
 TERM_PACKAGES="$TERM_PACKAGES aria2"
+TERM_PACKAGES="$TERM_PACKAGES binutils"
 TERM_PACKAGES="$TERM_PACKAGES bash-completion"
 TERM_PACKAGES="$TERM_PACKAGES carthage"
 TERM_PACKAGES="$TERM_PACKAGES cocoapods"
