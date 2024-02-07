@@ -69,9 +69,9 @@ done
 
 ## Install java packages
 
-if [ ! "$(brew ls --cask --versions adoptopenjdk11)" ] && [ ! "$(brew ls --versions openjdk@11)" ]; then
-    brew install -v openjdk@11
-    sudo ln -sfn /usr/local/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
+if [ ! "$(brew ls --versions openjdk@17)" ]; then
+    brew install -v openjdk@17
+    sudo ln -sfn /usr/local/opt/openjdk@17/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
 fi
 
 JAVA_PACKAGES="$JAVA_PACKAGES antlr"
