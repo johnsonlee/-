@@ -24,6 +24,8 @@ alias grep='grep --color=auto'
 
 ## Homebrew formulas
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 if [ -x "$(command -v brew)" ]; then
 
     BREW_PREFIX=$(brew --prefix)
