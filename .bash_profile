@@ -81,6 +81,11 @@ if [ -x "$(command -v brew)" ]; then
     [ -s "${BREW_PREFIX}/opt/nvm/nvm.sh"               ] && . "${BREW_PREFIX}/opt/nvm/nvm.sh"
     [ -s "${BREW_PREFIX}/opt/nvm/etc/bash_completion"  ] && . "${BREW_PREFIX}/opt/nvm/etc/bash_completion"
 
+    ## bash-git-prompt
+    if [ -f "${BREW_PREFIX}/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+        __GIT_PROMPT_DIR="${BREW_PREFIX}/opt/bash-git-prompt/share"
+        source "${BREW_PREFIX}/opt/bash-git-prompt/share/gitprompt.sh"
+    fi
 fi
 
 ## git command line promption
