@@ -105,9 +105,7 @@ fi
 ## Install cask packages
 
 CASK_PACKAGES="$CASK_PACKAGES android-file-transfer"
-CASK_PACKAGES="$CASK_PACKAGES android-ndk"
 CASK_PACKAGES="$CASK_PACKAGES android-platform-tools"
-CASK_PACKAGES="$CASK_PACKAGES android-sdk"
 CASK_PACKAGES="$CASK_PACKAGES android-studio"
 CASK_PACKAGES="$CASK_PACKAGES aria2gui"
 CASK_PACKAGES="$CASK_PACKAGES charles"
