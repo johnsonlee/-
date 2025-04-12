@@ -21,3 +21,5 @@
 [http]
 	postBuffer = 1048576000
 	cookiefile = ~/.gitcookies
+[credential]
+	helper = osxkeychain
