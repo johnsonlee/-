@@ -6,8 +6,6 @@
 	diff = auto
 	status = auto
 	branch = auto
-[remote "origin"]
-	push = refs/heads/*:refs/for/*
 [alias]
 	co = checkout
 	cp = cherry-pick
