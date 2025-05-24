@@ -18,6 +18,8 @@ alias la='ls -A'
 alias l='ls -CF'
 alias grep='grep --color=auto'
 
+export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+
 ## nvm
 
 [ -d "$HOME/.nvm" ] && export NVM_DIR="$HOME/.nvm"

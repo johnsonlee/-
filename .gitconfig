@@ -21,3 +21,7 @@
 	cookiefile = ~/.gitcookies
 [credential]
 	helper = osxkeychain
+[pager]
+	diff = delta
+[delta]
+	side-by-side = true
