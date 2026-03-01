@@ -17,6 +17,9 @@ set undodir=~/.vim/undodir
 set nocompatible
 set nofoldenable
 
+if has("gui_running")
+  set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+endif
 
 syntax enable
 syntax on
