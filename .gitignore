@@ -45,6 +45,9 @@
 .subversion/
 .swt/
 .tooling/
+!.vim/
+.vim/*
+!.vim/colors/
 .vim/.netrwhist
 .vim/undodir/
 .viminfo

@@ -19,7 +19,11 @@ set nofoldenable
 
 if has("gui_running")
   set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+  set lines=40 columns=120
 endif
+
+set background=dark
+colorscheme tango-dark
 
 syntax enable
 syntax on
