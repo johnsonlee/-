@@ -49,6 +49,7 @@
 .claude/*
 !.claude/CLAUDE.md
 !.claude/agents/
+!.claude/skills/
 !.vim/
 .vim/*
 !.vim/colors/
