@@ -45,6 +45,10 @@
 .subversion/
 .swt/
 .tooling/
+!.claude/
+.claude/*
+!.claude/CLAUDE.md
+!.claude/agents/
 !.vim/
 .vim/*
 !.vim/colors/
