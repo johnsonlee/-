@@ -15,9 +15,9 @@ description: >
 
 1. **明确主题和方向** — 跟用户对齐要写什么、核心观点是什么、目标读者是谁
 1. **生成 Markdown 草稿** — 按照下面的格式和风格要求生成文章
-1. **引号检查** — 草稿写入文件后，运行 `python3 ~/.claude/skills/blog-writer/fix_quotes.py <file.md>` 自动修正引号（中文内容用 `””`，英文内容用 `””`）
+1. **引号检查** — 草稿写入文件后，运行 `python3 ~/.claude/skills/blog-writer/fix_quotes.py <file.md>` 自动修正引号（中文内容用 `“”`，英文内容用 `""`）
 1. **用户确认** — 让用户审阅草稿，根据反馈修改
-1. **推送到 GitHub** — 用户确认后，通过 GitHub API 推送到 repo
+1. **推送到 GitHub** — 用户确认后，通过 GitHub CLI 或者 GitHub API 推送到 repo
 
 ## 文章格式
 
