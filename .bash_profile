@@ -34,7 +34,7 @@ if [ -x "$(command -v brew)" ]; then
 
     ## bash-completion
 
-    [ -e "${BREW_PREFIX}/etc/bash_completion"          ] && . ${BREW_PREFIX}/etc/bash_completion
+    [[ -r "${BREW_PREFIX}/etc/profile.d/bash_completion.sh" ]] && . "${BREW_PREFIX}/etc/profile.d/bash_completion.sh"
 
     ## android sdk & ndk
 
@@ -83,16 +83,10 @@ if [ -x "$(command -v brew)" ]; then
     [ -s "${BREW_PREFIX}/opt/nvm/nvm.sh"               ] && . "${BREW_PREFIX}/opt/nvm/nvm.sh"
     [ -s "${BREW_PREFIX}/opt/nvm/etc/bash_completion"  ] && . "${BREW_PREFIX}/opt/nvm/etc/bash_completion"
 
-    ## bash-git-prompt
-    if [ -f "${BREW_PREFIX}/opt/bash-git-prompt/share/gitprompt.sh" ]; then
-        __GIT_PROMPT_DIR="${BREW_PREFIX}/opt/bash-git-prompt/share"
-        source "${BREW_PREFIX}/opt/bash-git-prompt/share/gitprompt.sh"
-    fi
 fi
 
-## git command line promption
-
-[ ! -z "$(command -v __git_ps1)" ] && export PROMPT_COMMAND='__git_ps1 "\\[$(tput bold)\\]\u@\h\\[$(tput sgr0)\\]:\\[$(tput setaf 4)\\]\w\\[$(tput sgr0)\\]" " \\\$ "'
+## git command line prompt
+[ -n "$(command -v __git_ps1)" ] && PS1='\[\e[1m\]\u@\h\[\e[0m\]:\[\e[34m\]\w\[\e[0m\]$(__git_ps1 " (%s)") \$ '
 
 ## user bins
 
