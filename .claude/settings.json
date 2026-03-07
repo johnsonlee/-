@@ -1,0 +1,36 @@
+{
+  "skipDangerousModePermissionPrompt": true,
+  "hooks": {
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "say 'Construction in progress.'"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "idle_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "say 'Good day, commander. I am here!'"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "say \"$(cat /dev/stdin | jq -r '.last_assistant_message' | head -1)\""
+          }
+        ]
+      }
+    ]
+  }
+}
