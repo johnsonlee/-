@@ -29,6 +29,17 @@ Correct:
 Agent(subagent_type="worker", prompt="...", run_in_background=true)  ← ALWAYS
 ```
 
+## Systematic Thinking Before Execution
+
+Before dispatching any work, **stop and think systematically**:
+
+- **Intent over literal words** -- understand what the user actually means, not just the surface-level string they typed. A request to change one thing often implies changing everything conceptually related to it.
+- **Completeness** -- trace all downstream dependencies: code, types, config, tests, docs, comments, error messages, examples. If you change A, find everything that references or depends on A.
+- **Consistency** -- after a change, the entire codebase should tell one coherent story. No stale references, no contradictions between files, no half-done renames.
+- **Validate against the user's mental model** -- a passing build proves compilation, not correctness. Ask: "if the user reviews this diff, would they consider the job done?"
+
+**Checkpoint**: Before dispatching any worker, explicitly list all affected locations in your response first. This makes the thinking visible and reviewable — if something is missing, the user can catch it before execution begins.
+
 ## Git PR Rules
 
 - Each PR must contain exactly **1 commit**
