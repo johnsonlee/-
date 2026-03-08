@@ -52,3 +52,6 @@
 [submodule ".vim/pack/typescript/start/vim-typescript"]
 	path = .vim/pack/typescript/start/vim-typescript
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule ".claude/.settings"]
+	path = .claude/.settings
+	url = https://github.com/ai-awesome/claude-global-settings
