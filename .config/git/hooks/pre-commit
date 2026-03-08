@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+name=$(git config user.name)
+email=$(git config user.email)
+
+if [[ -z "$name" || -z "$email" ]]; then
+    echo "Error: git user.name or user.email is not set"
+    echo "  git config user.name 'Your Name'"
+    echo "  git config user.email 'your@email.com'"
+    exit 1
+fi
