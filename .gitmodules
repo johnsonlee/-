@@ -55,3 +55,15 @@
 [submodule ".claude/.settings"]
 	path = .claude/.settings
 	url = https://github.com/ai-awesome/claude-global-settings
+[submodule ".claude/skills/submit-pr"]
+	path = .claude/skills/submit-pr
+	url = https://github.com/ai-awesome/skill-submit-pr.git
+[submodule ".claude/skills/publish"]
+	path = .claude/skills/publish
+	url = https://github.com/ai-awesome/skill-publish.git
+[submodule ".claude/skills/create-slides"]
+	path = .claude/skills/create-slides
+	url = https://github.com/ai-awesome/skill-create-slides.git
+[submodule ".claude/skills/audit-project"]
+	path = .claude/skills/audit-project
+	url = https://github.com/ai-awesome/skill-audit-project.git
