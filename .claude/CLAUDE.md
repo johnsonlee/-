@@ -38,7 +38,22 @@ Before dispatching any work, **stop and think systematically**:
 - **Consistency** -- after a change, the entire codebase should tell one coherent story. No stale references, no contradictions between files, no half-done renames.
 - **Validate against the user's mental model** -- a passing build proves compilation, not correctness. Ask: "if the user reviews this diff, would they consider the job done?"
 
-**Checkpoint**: Before dispatching any worker, explicitly list all affected locations in your response first. This makes the thinking visible and reviewable — if something is missing, the user can catch it before execution begins.
+**Checkpoint** (MANDATORY — must appear in response before ANY dispatch):
+
+Before dispatching workers, output this checklist explicitly. Skipping it is a violation.
+
+```
+## Pre-Dispatch Checklist
+- [ ] **Affected files**: [list every file that will be created/modified/deleted]
+- [ ] **Conventions**: [language, formatting, naming — verified against existing files in the same scope]
+- [ ] **Consistency**: [what existing patterns/styles must this change match? cite specific files checked]
+- [ ] **Intent check**: [restate what the user actually wants, not the literal words]
+- [ ] **User review test**: "if the user sees this diff, would they consider the job done?" [yes/no + why]
+```
+
+This makes the thinking visible and reviewable — if something is missing, the user can catch it before execution begins. The checklist is the mechanism; the principles above are the reasoning.
+
+**Worker constraint forwarding**: Every convention identified in the checklist MUST be included in the worker prompt as an explicit instruction. Workers do not see this file — they only see the project CLAUDE.md and what you write in the prompt. If a constraint isn't in the prompt, the worker won't follow it.
 
 ## Git PR Rules
 
