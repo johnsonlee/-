@@ -24,9 +24,8 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 17)
 
 [ -d "$HOME/.nvm" ] && export NVM_DIR="$HOME/.nvm"
 
-## update submodules
+## keep .claude up-to-date
 
-git submodule update --remote --recursive
 git -C ~/.claude submodule update --remote --recursive
 
 ## Homebrew formulas
