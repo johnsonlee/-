@@ -96,3 +96,7 @@ fi
 
 [ -d "$HOME/bin" ] && export PATH="~/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
